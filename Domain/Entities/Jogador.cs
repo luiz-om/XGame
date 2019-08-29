@@ -6,11 +6,16 @@ using System.Threading.Tasks;
 
 namespace Domain.Entities
 {
-    class Jogador
+    public class Jogador
     {
         public Guid JogadorId { get; set; }
 
-        public string Nome { get; set; }
+        public string PrimeiroNome { get; set; }
+        public string UltimoNome { get; set; }
+        public string Email { get; set; }
+        public string  Senha { get; set; }
+        public int Status { get; set; }
 
-    }
+
+    } 
 }

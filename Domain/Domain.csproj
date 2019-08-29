@@ -42,8 +42,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\Jogador.cs" />
+    <Compile Include="Entities\Jogo.cs" />
+    <Compile Include="Entities\JogoPlataforma.cs" />
+    <Compile Include="Entities\MeuJogo.cs" />
+    <Compile Include="Entities\Plataforma.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Diagramas\XGame.cd" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
