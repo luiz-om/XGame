@@ -8,5 +8,9 @@ namespace Domain.Entities
 {
     class Jogador
     {
+        public Guid JogadorId { get; set; }
+
+        public string Nome { get; set; }
+
     }
 }
