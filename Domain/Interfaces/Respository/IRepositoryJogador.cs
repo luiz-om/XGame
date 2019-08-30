@@ -1,4 +1,5 @@
 ﻿using Domain.Arguments.Jogador;
+using Domain.Entities;
 using Domain.Interfaces.Services;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,6 @@ namespace Domain.Interfaces.Respository
     {
         AutenticarJogadorResponse AutenticarJogador(AutenticarJogadorRequest request);
 
-        Guid AdicionarJogador(AdicionarJogadorRequest request);
+        Guid AdicionarJogador(Jogador jogador);
     }
 }

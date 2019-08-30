@@ -1,6 +1,9 @@
 ﻿using Domain.Arguments.Jogador;
+using Domain.Entities;
 using Domain.Interfaces.Respository;
 using Domain.Interfaces.Services;
+using Domain.ValueObjects;
+using prmToolkit.NotificationPattern;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Domain.Services
 {
-    public class ServiceJogador : IServiceJogador
+    public class ServiceJogador : Notifiable, IServiceJogador
     {
         private readonly IRepositoryJogador _repositoryJogador;
         public ServiceJogador()
@@ -23,7 +26,13 @@ namespace Domain.Services
 
         public AdicionarJogadorResponse AdicionarJogador(AdicionarJogadorRequest request)
         {
-            Guid id = _repositoryJogador.AdicionarJogador(request);
+            Jogador jogador = new Jogador();
+            jogador.Email = request.Email;
+            jogador.Nome = request.Nome;
+            jogador.Status = Enum.EnumSituacaoJogador.EmAndamento;
+
+
+            Guid id = _repositoryJogador.AdicionarJogador(jogador);
             return new AdicionarJogadorResponse() { Id = id, Message = "Operação realizada com sucesso" };
         }
 
@@ -31,28 +40,20 @@ namespace Domain.Services
         {
             if (request == null)
             {
-                throw new Exception("AutenticarJOgadorRequest é obrigatório");
+                throw new Exception("request invalido");
             }
 
-            if (string.IsNullOrEmpty(request.Email))
-            {
-                throw new Exception("Informe um e-mail");
-            }
-            if (IsEmail(request.Email))
-            {
-                throw new Exception("Informe um e-mail válido");
+            var email = new Email("Paulo");
 
-            }
-            if (string.IsNullOrEmpty(request.Senha))
+            var jogador = new Jogador(email, "222");
+
+            if (jogador.IsInvalid())
             {
-                throw new Exception("Informe uma senha.");
-            }
-            if (request.Senha.Length < 6 )
-            {
-                throw new Exception("A senha deve conter no mínimo 6 caracteres");
+                return null;
             }
 
-           var response= _repositoryJogador.AutenticarJogador(request);
+            AddNotifications(jogador);
+            var response = _repositoryJogador.AutenticarJogador(request);
 
             return response;
         }

@@ -20,6 +20,7 @@ namespace XGame.AppConsole
             Console.WriteLine("Criei a instancia do objeto");
             request.Email = "Maria.com";
             var response = service.AutenticarJogador(request);
+            Console.WriteLine(service.Notifications); ;
             Console.ReadLine();
 
 

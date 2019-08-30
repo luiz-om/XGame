@@ -8,3 +8,8 @@ C:\Users\luizf\Source\Repos\luiz-om\XGame\XGame.AppConsole\obj\Debug\XGame.AppCo
 C:\Users\luizf\Source\Repos\luiz-om\XGame\XGame.AppConsole\obj\Debug\XGame.AppConsole.csproj.CopyComplete
 C:\Users\luizf\Source\Repos\luiz-om\XGame\XGame.AppConsole\obj\Debug\XGame.AppConsole.exe
 C:\Users\luizf\Source\Repos\luiz-om\XGame\XGame.AppConsole\obj\Debug\XGame.AppConsole.pdb
+C:\Users\luizf\Source\Repos\luiz-om\XGame\XGame.AppConsole\bin\Debug\prmToolkit.NotificationPattern.dll
+C:\Users\luizf\Source\Repos\luiz-om\XGame\XGame.AppConsole\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\luizf\Source\Repos\luiz-om\XGame\XGame.AppConsole\bin\Debug\Domain.dll.config
+C:\Users\luizf\Source\Repos\luiz-om\XGame\XGame.AppConsole\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\luizf\Source\Repos\luiz-om\XGame\XGame.AppConsole\bin\Debug\en-US\prmToolkit.NotificationPattern.resources.dll
