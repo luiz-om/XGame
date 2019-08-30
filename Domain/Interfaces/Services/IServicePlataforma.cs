@@ -9,6 +9,6 @@ namespace Domain.Interfaces.Services
 {
     public interface IServicePlataforma
     {
-        AdicionarPlatafromaResponse AdicionarPlatafroma(AdicionarPlataformRequest request)
+        AdicionarPlatafromaResponse AdicionarPlatafroma(AdicionarPlataformRequest request);
     }
 }
