@@ -1,0 +1,6 @@
+C:\Users\luizf\Source\Repos\luiz-om\XGame\Domain\bin\Debug\Domain.dll
+C:\Users\luizf\Source\Repos\luiz-om\XGame\Domain\bin\Debug\Domain.pdb
+C:\Users\luizf\Source\Repos\luiz-om\XGame\Domain\obj\Debug\XGame.Domain.csprojAssemblyReference.cache
+C:\Users\luizf\Source\Repos\luiz-om\XGame\Domain\obj\Debug\XGame.Domain.csproj.CoreCompileInputs.cache
+C:\Users\luizf\Source\Repos\luiz-om\XGame\Domain\obj\Debug\Domain.dll
+C:\Users\luizf\Source\Repos\luiz-om\XGame\Domain\obj\Debug\Domain.pdb

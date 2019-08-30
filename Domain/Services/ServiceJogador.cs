@@ -12,7 +12,10 @@ namespace Domain.Services
     public class ServiceJogador : IServiceJogador
     {
         private readonly IRepositoryJogador _repositoryJogador;
+        public ServiceJogador()
+        {
 
+        }
         public ServiceJogador(IRepositoryJogador repositoryJogador)
         {
             _repositoryJogador = repositoryJogador;
@@ -20,13 +23,43 @@ namespace Domain.Services
 
         public AdicionarJogadorResponse AdicionarJogador(AdicionarJogadorRequest request)
         {
-          Guid id =   _repositoryJogador.AdicionarJogador(request);
+            Guid id = _repositoryJogador.AdicionarJogador(request);
             return new AdicionarJogadorResponse() { Id = id, Message = "Operação realizada com sucesso" };
         }
 
-        public AutenticarJogadorResponse AutenticarJogador(AutenticarJoga dorRequest request)
+        public AutenticarJogadorResponse AutenticarJogador(AutenticarJogadorRequest request)
         {
-            throw new NotImplementedException();
+            if (request == null)
+            {
+                throw new Exception("AutenticarJOgadorRequest é obrigatório");
+            }
+
+            if (string.IsNullOrEmpty(request.Email))
+            {
+                throw new Exception("Informe um e-mail");
+            }
+            if (IsEmail(request.Email))
+            {
+                throw new Exception("Informe um e-mail válido");
+
+            }
+            if (string.IsNullOrEmpty(request.Senha))
+            {
+                throw new Exception("Informe uma senha.");
+            }
+            if (request.Senha.Length < 6 )
+            {
+                throw new Exception("A senha deve conter no mínimo 6 caracteres");
+            }
+
+           var response= _repositoryJogador.AutenticarJogador(request);
+
+            return response;
+        }
+
+        private bool IsEmail(string email)
+        {
+            return false;
         }
     }
 }
